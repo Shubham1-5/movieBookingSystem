@@ -32,6 +32,14 @@ public class MovieBookingSystemApplication {
 		System.out.println("Movie object before storage : "+movie);
 
 		Movie movie1 = new Movie();
+
+		/**
+		 * Here everything is written except movieId, because that would be created
+		 * by db internally (we mentioned it in Movie.class)
+		 * Even if we write move.setMovieId(4) - JPA doesn't care because it will
+		 * create automatically
+		 */
+
 		movie1.setMovieName("Mission Mangal");
 		movie1.setMovieDescription("Very nice movie again");
 		movie1.setReleaseDate(LocalDateTime.of(2019,3,25,5,30));
@@ -44,6 +52,23 @@ public class MovieBookingSystemApplication {
 		Movie savedObject1 = movieDao.save(movie1);
 		System.out.println("Saved object : "+savedObject);
 		System.out.println("Saved object2 : "+savedObject1);
+
+		/**
+		 * I should be able to find the movie I'm interested in
+		 * Here findById returns Optional (to avoid null pointer exception)
+		 */
+
+		Movie searchedMovie = movieDao.findById(2).get();
+		System.out.println("Searched Movie : "+searchedMovie);
+
+		movie.setMovieDescription("Updated description");
+		movieDao.save(movie);
+
+		/**
+		 * I want to delete the movie
+		 */
+
+		movieDao.delete(searchedMovie);
 	}
 
 }
