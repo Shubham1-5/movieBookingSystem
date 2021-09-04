@@ -12,13 +12,22 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int movieId;
 
+    @Column(length = 50, nullable = false, unique = true)
     private String movieName;
 
-    @Column(name = "movie_desc")
+    @Column(name = "movie_desc", length = 500, nullable = false)
     private String movieDescription;
+
+    @Column(nullable = false)
     private LocalDateTime releaseDate;
+
+    @Column(nullable = false)
     private int duration;
+
+    @Column(length = 500, nullable = false)
     private String coverPhotoUrl;
+
+    @Column(length = 500, nullable = false)
     private String trailerUrl;
 
     public int getMovieId() {
