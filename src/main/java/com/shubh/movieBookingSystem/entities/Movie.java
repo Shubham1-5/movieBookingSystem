@@ -2,6 +2,7 @@ package com.shubh.movieBookingSystem.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity     //Tells JPA that it's a table
 @Table(name = "Movie_Table")    //Tells JPA that relation name should not be default class name
@@ -29,6 +30,31 @@ public class Movie {
 
     @Column(length = 500, nullable = false)
     private String trailerUrl;
+
+    @ManyToOne
+    @JoinColumn(name = "status_id", nullable = false)
+    private Status status;
+
+    @JoinTable(name = "movie_theatre_d", joinColumns = @JoinColumn(name = "movie_id"),
+    inverseJoinColumns = @JoinColumn(name = "theatre_id"))
+    @ManyToMany
+    private List<Theatre> theatres;
+
+    public List<Theatre> getTheatres() {
+        return theatres;
+    }
+
+    public void setTheatres(List<Theatre> theatres) {
+        this.theatres = theatres;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
     public int getMovieId() {
         return movieId;

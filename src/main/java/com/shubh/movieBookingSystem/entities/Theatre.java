@@ -1,9 +1,8 @@
 package com.shubh.movieBookingSystem.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
 
 
 @Entity
@@ -18,6 +17,19 @@ public class Theatre {
 
     @Column(nullable = false)
     private float ticketPrice = 150.00f;
+
+    @ManyToOne
+    @JoinColumn(name = "city_id", nullable = false)
+    @JsonManagedReference
+    private City city;
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
 
     public int getTheatreId() {
         return theatreId;
