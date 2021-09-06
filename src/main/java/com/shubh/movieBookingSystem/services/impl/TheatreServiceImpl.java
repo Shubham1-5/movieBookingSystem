@@ -49,10 +49,6 @@ public class TheatreServiceImpl implements TheatreService {
         return obj != null;
     }
 
-    private boolean isNotNullOrZero(int val) {
-        return val != 0;
-    }
-
     private boolean isNotNullOrZero(float val) {
         return val >= 0.1f;
     }
