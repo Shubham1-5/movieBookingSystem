@@ -15,6 +15,14 @@ public class Language {
     @Column(length = 20, nullable = false, unique = true)
     private String languageName;
 
+    public Language(String languageName) {
+        this.languageName = languageName;
+    }
+
+    public Language() {
+
+    }
+
     public int getLanguageId() {
         return languageId;
     }
