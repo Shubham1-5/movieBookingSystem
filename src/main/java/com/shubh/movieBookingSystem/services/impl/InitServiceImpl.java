@@ -17,31 +17,34 @@ import java.util.List;
 @Service
 public class InitServiceImpl implements InitService {
     @Autowired
-    CityDao cityDao;
+    private CityDao cityDao;
 
     @Autowired
-    UserTypeDao userTypeDao;
+    private UserTypeDao userTypeDao;
 
     @Autowired
-    LanguageDao languageDao;
+    private LanguageDao languageDao;
 
     @Autowired
-    StatusDao statusDao;
+    private StatusDao statusDao;
 
     @Autowired
-    UserService customerService;
+    private StatusService statusService;
 
     @Autowired
-    TheatreService theatreService;
+    private UserService customerService;
 
     @Autowired
-    MovieService movieService;
+    private TheatreService theatreService;
 
     @Autowired
-    MovieTheatreService movieTheatreService;
+    private MovieService movieService;
 
     @Autowired
-    BookingService bookingService;
+    private MovieTheatreService movieTheatreService;
+
+    @Autowired
+    private BookingService bookingService;
 
     List<City> cities = Arrays.asList(new City("Patna"), new City("Mumbai"), new City("Kolkata"), new City("Bangalore"));
     List<UserType> userTypes = Arrays.asList(new UserType("Customer"), new UserType("Admin"));
@@ -122,7 +125,7 @@ public class InitServiceImpl implements InitService {
         cities.forEach(city -> cityDao.save(city));
         userTypes.forEach(userType -> userTypeDao.save(userType));
         languages.forEach(language -> languageDao.save(language));
-        statuses.forEach(status -> statusDao.save(status));
+        statuses.forEach(status -> statusService.acceptStatusDetails(status));
         addCustomer();
         addTheatres();
         addMovies();
