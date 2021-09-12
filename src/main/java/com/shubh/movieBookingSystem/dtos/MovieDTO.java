@@ -1,5 +1,8 @@
 package com.shubh.movieBookingSystem.dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.shubh.movieBookingSystem.entities.Movie;
+
 import java.time.LocalDateTime;
 
 /**
@@ -7,6 +10,7 @@ import java.time.LocalDateTime;
  */
 public class MovieDTO {
     private int movieId;
+    @JsonProperty("movie_name")
     private String movieName;
     private String movieDescription;
     private LocalDateTime releaseDate;
