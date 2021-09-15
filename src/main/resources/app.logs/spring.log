@@ -56,3 +56,106 @@
 2021-09-15 09:24:50.036  INFO 16040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-09-15 09:24:50.036  INFO 16040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 2021-09-15 09:24:50.115 ERROR 16040 --- [http-nio-8080-exec-1] MovieController.class                    : Exception happened, movie Id is not available
+2021-09-15 11:16:17.244  WARN 16040 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h9m36s565ms497µs400ns).
+2021-09-15 17:49:18.947  WARN 16040 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h50m58s252ms81µs899ns).
+2021-09-15 19:41:46.368  INFO 16040 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-15 19:41:46.368  INFO 16040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-09-15 19:41:46.368  INFO 16040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-09-15 19:48:57.941  INFO 18896 --- [main] c.s.m.MovieBookingSystemApplication      : Starting MovieBookingSystemApplication using Java 1.8.0_302 on Sunny-Laptop with PID 18896 (C:\Users\91898\Downloads\movieBookingSystem\movieBookingSystem\target\classes started by 91898 in C:\Users\91898\Downloads\movieBookingSystem\movieBookingSystem)
+2021-09-15 19:48:57.952  INFO 18896 --- [main] c.s.m.MovieBookingSystemApplication      : No active profile set, falling back to default profiles: default
+2021-09-15 19:48:58.560  INFO 18896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-15 19:48:58.638  INFO 18896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 9 JPA repository interfaces.
+2021-09-15 19:48:59.241  INFO 18896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-15 19:48:59.256  INFO 18896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-15 19:48:59.256  INFO 18896 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-15 19:48:59.319  INFO 18896 --- [main] o.a.c.c.C.[.[localhost].[/mbs/v1]        : Initializing Spring embedded WebApplicationContext
+2021-09-15 19:48:59.319  INFO 18896 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1335 ms
+2021-09-15 19:48:59.350  INFO 18896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-15 19:48:59.491  INFO 18896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-15 19:48:59.538  INFO 18896 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbsdb'
+2021-09-15 19:48:59.680  INFO 18896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-15 19:48:59.728  INFO 18896 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-15 19:48:59.837  INFO 18896 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-15 19:48:59.932  INFO 18896 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-15 19:49:00.496  INFO 18896 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-15 19:49:00.512  INFO 18896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-15 19:49:01.049  WARN 18896 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-15 19:49:01.346  INFO 18896 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2bb549f1-dca0-4c95-b25f-0b8a730cfc97
+
+2021-09-15 19:49:01.534  INFO 18896 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75e4fe3c, org.springframework.security.web.context.SecurityContextPersistenceFilter@61eab26b, org.springframework.security.web.header.HeaderWriterFilter@727dcc64, org.springframework.security.web.csrf.CsrfFilter@2166c48a, org.springframework.security.web.authentication.logout.LogoutFilter@5315266, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@71d99732, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2b9d4b0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7bda01da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d31f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@116fc29e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35454c7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65ef9a0a, org.springframework.security.web.session.SessionManagementFilter@288409f0, org.springframework.security.web.access.ExceptionTranslationFilter@6480a063, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e258d3b]
+2021-09-15 19:49:01.593  INFO 18896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/mbs/v1'
+2021-09-15 19:49:01.593  INFO 18896 --- [main] c.s.m.MovieBookingSystemApplication      : Started MovieBookingSystemApplication in 4.038 seconds (JVM running for 4.397)
+2021-09-15 19:49:01.829  INFO 18896 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for info
+2021-09-15 19:49:01.829  WARN 18896 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for warn
+2021-09-15 19:49:01.829 ERROR 18896 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for error
+2021-09-15 19:49:17.951  INFO 18896 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/mbs/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-15 19:49:17.951  INFO 18896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-15 19:49:17.952  INFO 18896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-15 20:56:59.503  INFO 18896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-15 20:56:59.503  INFO 18896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-09-15 20:56:59.503  INFO 18896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-09-15 20:57:02.092  INFO 15136 --- [main] c.s.m.MovieBookingSystemApplication      : Starting MovieBookingSystemApplication using Java 1.8.0_302 on Sunny-Laptop with PID 15136 (C:\Users\91898\Downloads\movieBookingSystem\movieBookingSystem\target\classes started by 91898 in C:\Users\91898\Downloads\movieBookingSystem\movieBookingSystem)
+2021-09-15 20:57:02.107  INFO 15136 --- [main] c.s.m.MovieBookingSystemApplication      : No active profile set, falling back to default profiles: default
+2021-09-15 20:57:02.721  INFO 15136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-15 20:57:02.800  INFO 15136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 9 JPA repository interfaces.
+2021-09-15 20:57:03.429  INFO 15136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-15 20:57:03.429  INFO 15136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-15 20:57:03.429  INFO 15136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-15 20:57:03.508  INFO 15136 --- [main] o.a.c.c.C.[.[localhost].[/mbs/v1]        : Initializing Spring embedded WebApplicationContext
+2021-09-15 20:57:03.508  INFO 15136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1369 ms
+2021-09-15 20:57:03.538  INFO 15136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-15 20:57:03.760  INFO 15136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-15 20:57:03.766  INFO 15136 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbsdb'
+2021-09-15 20:57:03.912  INFO 15136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-15 20:57:03.951  INFO 15136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-15 20:57:04.057  INFO 15136 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-15 20:57:04.151  INFO 15136 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-15 20:57:04.739  INFO 15136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-15 20:57:04.747  INFO 15136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-15 20:57:05.349  WARN 15136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-15 20:57:05.604  INFO 15136 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dc2f7c69-f4a0-43e9-b913-82bbdd0a2e6a
+
+2021-09-15 20:57:05.823  INFO 15136 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@537b3be1, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f541e67, org.springframework.security.web.header.HeaderWriterFilter@50f3ba6a, org.springframework.security.web.csrf.CsrfFilter@7df3da0b, org.springframework.security.web.authentication.logout.LogoutFilter@4a453f8d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7bda01da, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@646cb2e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@15d58530, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@114b203, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3514ac7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b5b53c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31f5b923, org.springframework.security.web.session.SessionManagementFilter@1d806de6, org.springframework.security.web.access.ExceptionTranslationFilter@8549c5f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cad24ae]
+2021-09-15 20:57:05.887  INFO 15136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/mbs/v1'
+2021-09-15 20:57:05.887  INFO 15136 --- [main] c.s.m.MovieBookingSystemApplication      : Started MovieBookingSystemApplication in 4.178 seconds (JVM running for 4.55)
+2021-09-15 20:57:06.149  INFO 15136 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for info
+2021-09-15 20:57:06.149  WARN 15136 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for warn
+2021-09-15 20:57:06.149 ERROR 15136 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for error
+2021-09-15 20:57:15.355  INFO 15136 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/mbs/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-15 20:57:15.355  INFO 15136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-15 20:57:15.356  INFO 15136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-15 21:05:23.229  INFO 15136 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-15 21:05:23.229  INFO 15136 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-09-15 21:05:23.229  INFO 15136 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-09-15 21:05:26.615  INFO 18472 --- [main] c.s.m.MovieBookingSystemApplication      : Starting MovieBookingSystemApplication using Java 1.8.0_302 on Sunny-Laptop with PID 18472 (C:\Users\91898\Downloads\movieBookingSystem\movieBookingSystem\target\classes started by 91898 in C:\Users\91898\Downloads\movieBookingSystem\movieBookingSystem)
+2021-09-15 21:05:26.630  INFO 18472 --- [main] c.s.m.MovieBookingSystemApplication      : No active profile set, falling back to default profiles: default
+2021-09-15 21:05:27.195  INFO 18472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-15 21:05:27.257  INFO 18472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 9 JPA repository interfaces.
+2021-09-15 21:05:27.868  INFO 18472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-15 21:05:27.884  INFO 18472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-15 21:05:27.884  INFO 18472 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-15 21:05:27.947  INFO 18472 --- [main] o.a.c.c.C.[.[localhost].[/mbs/v1]        : Initializing Spring embedded WebApplicationContext
+2021-09-15 21:05:27.947  INFO 18472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1285 ms
+2021-09-15 21:05:27.978  INFO 18472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-15 21:05:28.150  INFO 18472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-15 21:05:28.166  INFO 18472 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mbsdb'
+2021-09-15 21:05:28.291  INFO 18472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-15 21:05:28.338  INFO 18472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-15 21:05:28.448  INFO 18472 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-15 21:05:28.542  INFO 18472 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-15 21:05:29.093  INFO 18472 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-15 21:05:29.109  INFO 18472 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-15 21:05:29.642  WARN 18472 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-15 21:05:30.113  INFO 18472 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79e2606f, org.springframework.security.web.context.SecurityContextPersistenceFilter@79c4f23b, org.springframework.security.web.header.HeaderWriterFilter@2b9d4b0, org.springframework.security.web.csrf.CsrfFilter@236fd411, org.springframework.security.web.authentication.logout.LogoutFilter@1be3f8f8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77e6761f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@11cc9e1e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@734cf881, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15d58530, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15371de2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7827d7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a890fdd, org.springframework.security.web.session.SessionManagementFilter@2be50bba, org.springframework.security.web.access.ExceptionTranslationFilter@319aa9ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b25d695]
+2021-09-15 21:05:30.173  INFO 18472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/mbs/v1'
+2021-09-15 21:05:30.173  INFO 18472 --- [main] c.s.m.MovieBookingSystemApplication      : Started MovieBookingSystemApplication in 3.928 seconds (JVM running for 4.277)
+2021-09-15 21:05:30.455  INFO 18472 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for info
+2021-09-15 21:05:30.455  WARN 18472 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for warn
+2021-09-15 21:05:30.455 ERROR 18472 --- [main] c.s.m.MovieBookingSystemApplication      : Writing for error
+2021-09-15 21:06:24.954  INFO 18472 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/mbs/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-15 21:06:24.954  INFO 18472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-15 21:06:24.955  INFO 18472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
