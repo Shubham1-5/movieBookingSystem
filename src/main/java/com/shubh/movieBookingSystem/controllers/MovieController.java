@@ -24,7 +24,6 @@ import java.util.List;
 
 public class MovieController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger("MovieController.class");
     @Autowired
     private MovieService movieService;
 
@@ -40,7 +39,6 @@ public class MovieController {
      */
     @GetMapping("/greetings")
     public ResponseEntity helloWorld(){
-        LOGGER.info("Inside the hello world method");
         return new ResponseEntity("Hello People", HttpStatus.OK);
     }
 
