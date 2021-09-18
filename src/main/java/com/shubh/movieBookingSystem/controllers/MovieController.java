@@ -3,7 +3,9 @@ package com.shubh.movieBookingSystem.controllers;
 import com.shubh.movieBookingSystem.dtos.MovieDTO;
 import com.shubh.movieBookingSystem.entities.Movie;
 import com.shubh.movieBookingSystem.exceptions.MovieDetailsNotFoundException;
+import com.shubh.movieBookingSystem.exceptions.MovieInvalidNameException;
 import com.shubh.movieBookingSystem.services.MovieService;
+import com.shubh.movieBookingSystem.validators.MovieDTOValidator;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,9 @@ public class MovieController {
 
     @Autowired
     private MovieService movieService;
+
+    @Autowired
+    private MovieDTOValidator movieDTOValidator;
 
     /**
      * We need to define the ModelMapper bean first
@@ -68,7 +73,14 @@ public class MovieController {
      */
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity createMovie(@RequestBody MovieDTO movieDTO) {
+    public ResponseEntity createMovie(@RequestBody MovieDTO movieDTO) throws MovieInvalidNameException {
+
+        /**
+         * Validate the request body
+         * We cannot write here as it will violate SRP
+         */
+        movieDTOValidator.validate(movieDTO);
+
         //Create Movie object from MovieDTO object
         Movie movie = modelMapper.map(movieDTO, Movie.class);
         Movie savedMovie = movieService.acceptMovieDetails(movie);

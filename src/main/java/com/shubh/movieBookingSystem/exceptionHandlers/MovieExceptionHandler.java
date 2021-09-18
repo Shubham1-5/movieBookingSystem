@@ -1,6 +1,7 @@
 package com.shubh.movieBookingSystem.exceptionHandlers;
 
 import com.shubh.movieBookingSystem.exceptions.MovieDetailsNotFoundException;
+import com.shubh.movieBookingSystem.exceptions.MovieInvalidNameException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -26,5 +27,10 @@ public class MovieExceptionHandler {
     public ResponseEntity handleMovieNotFoundException() {
         LOGGER.error("Exception happened, movie Id is not available");
         return new ResponseEntity("Movie Id passed is not available", HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = MovieInvalidNameException.class)
+    public ResponseEntity handleMovieNameInvalidException(){
+        return new ResponseEntity("Movie name not passed / invalid", HttpStatus.BAD_REQUEST);
     }
 }
