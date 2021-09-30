@@ -15,9 +15,9 @@ Movie Booking Site using Spring Boot and H2
 
 ## Installation
 
-- Install IntellIJ
 - Install Java (minimum requirement is Java 8)
 - Setup environment variables for Java configuration
+- Install IntellIJ
 - Clone this repository and then refresh maven
 - Start the server
 
