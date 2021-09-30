@@ -1,6 +1,6 @@
 # Movie Booking System
 
-Movie Booking Site using Spring Boot and H2
+Movie Booking Site using Spring Boot and H2 along with REST APIs
 
 ## Techs used
 
